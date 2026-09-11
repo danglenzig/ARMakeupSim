@@ -31,7 +31,7 @@ Transform:
   m_GameObject: {fileID: 5287267002074809780}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 684.275, y: 269.36075, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -185,7 +185,7 @@ Transform:
   m_GameObject: {fileID: 9116771238194044557}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.004333496, y: -0.00869751, z: -0.01285}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -260,8 +260,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4df02950e15923741af206afd3937ae3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MakupSim.MakeupSimFaceLayer
-  _mats: []
-  _interactionEvent: {fileID: 0}
+  _mats:
+  - {fileID: 2100000, guid: 00f19149fa4e39b44943ba38ed31eba3, type: 2}
+  - {fileID: 2100000, guid: 2aac3e8e948f67249b2037c073c4ee2d, type: 2}
+  - {fileID: 2100000, guid: 0321218cb92ce3d4683850335e40aa01, type: 2}
+  - {fileID: 2100000, guid: 2caddad9bcb82e74884b24d34ce5f5b6, type: 2}
+  _interactionEvent: {fileID: 11400000, guid: bf6e8695ff3202042bdb0bdff2d1e38a, type: 2}
+  _tagString: LIPS
+  _canChangeSize: 1
+  _canChangeColor: 1
+  _colors:
+  - {r: 1, g: 1, b: 1, a: 1}
+  - {r: 1, g: 0, b: 0, a: 1}
+  - {r: 0, g: 1, b: 0, a: 1}
+  - {r: 0, g: 0, b: 1, a: 1}
+  - {r: 0, g: 1, b: 1, a: 1}
+  - {r: 1, g: 0, b: 1, a: 1}
+  - {r: 0.5019608, g: 0.5019608, b: 0.5019608, a: 1}
 --- !u!1001 &4289199781856401200
 PrefabInstance:
   m_ObjectHideFlags: 0

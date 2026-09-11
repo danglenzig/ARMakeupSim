@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using Events;
 using MiscTools;
 using NUnit.Framework;
+using Unity.XR.CoreUtils;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -13,9 +14,14 @@ namespace MakupSim
         [SerializeField] private GameObject _welcomeUI;
         [SerializeField] private GameObject _inGameUI;
         [SerializeField] private GameObject _layersUI;
+        [SerializeField] private GameObject _layerButtons;
+        [SerializeField] private GameObject _layerMenus;
+        [SerializeField] private GameObject _lipsMenu;
+        [SerializeField] private Button _lipsSizeButton;
+        [SerializeField] private Button _lipsColorButton;
         [SerializeField] private Button _welcomeContinueButton;
         [SerializeField] private Button _layersButton;
-        [SerializeField] private Button _cycleLipsButton;
+        [SerializeField] private Button _lipsMenuButton;
 
         private void OnValidate()
         {
@@ -33,14 +39,19 @@ namespace MakupSim
 
             _welcomeContinueButton.onClick.AddListener(HandleWelcomeContinueButtonClicked);
             _layersButton.onClick.AddListener(HandleLayersButtonClicked);
-            _cycleLipsButton.onClick.AddListener(HandleCycleLipsButtonClicked);
+
+            _lipsMenuButton.onClick.AddListener(HandleLipsMenuButtonClicked);
+            _lipsSizeButton.onClick.AddListener(HandleLipsSizeButtonPressed);
+            _lipsColorButton.onClick.AddListener(HandleLipsColorButtonPressed);
             
         }
         private void OnDisable()
         {
             _welcomeContinueButton.onClick.RemoveAllListeners();
             _layersButton.onClick.RemoveAllListeners();
-            _cycleLipsButton.onClick.RemoveAllListeners();
+            _lipsMenuButton.onClick.RemoveAllListeners();
+            _lipsSizeButton.onClick.RemoveAllListeners();
+            _lipsColorButton.onClick.RemoveAllListeners();
         }
         void Start()
         {
@@ -57,13 +68,47 @@ namespace MakupSim
         private void HandleLayersButtonClicked()
         {
             _layersUI.SetActive(!_layersUI.activeSelf);
+
+            // resets the layer menu view
+            _layerButtons.SetActive(true);
+            HideAllLayerMenus();
         }
 
-        private void HandleCycleLipsButtonClicked()
+        private void HandleLipsMenuButtonClicked()
         {
-            List<string> tags = new List<string>() { "LAYER", "LIPS" };
+            //List<string> tags = new List<string>() { "LAYER", "LIPS" };
+            //_interactionEvent.TriggerEvent(tags);
+            //Debug.Log($"### {name}: Cycle lips button clicked. Tags: {StringTools.StringListToString(tags)}");
+
+            // Hide the buttons
+            _layerButtons.SetActive(false);
+            _lipsMenu.SetActive(true);
+        }
+
+        private void HandleLipsSizeButtonPressed()
+        {
+            List<string> tags = new List<string>() { "LAYER", "LIPS", "SIZE" };
             _interactionEvent.TriggerEvent(tags);
-            Debug.Log($"### {name}: Cycle lips button clicked. Tags: {StringTools.StringListToString(tags)}");
+            //Debug.Log($"### {name}: Lips size button clicked. Tags: {StringTools.StringListToString(tags)}");
+        }
+
+        private void HandleLipsColorButtonPressed()
+        {
+            List<string> tags = new List<string>() { "LAYER", "LIPS", "COLOR" };
+            _interactionEvent.TriggerEvent(tags);
+        }
+
+        private void HideAllLayerMenus()
+        {
+            Transform[] menuTransforms = _layerMenus.GetComponentsInChildren<Transform>();
+            foreach (Transform t in menuTransforms)
+            {
+                if (t.tag == "LayerMenu")
+                {
+                    t.gameObject.SetActive(false);
+                }
+                
+            }
         }
 
     }

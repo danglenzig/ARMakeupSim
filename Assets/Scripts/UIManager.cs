@@ -13,7 +13,7 @@ namespace MakupSim
 
         private void OnValidate()
         {
-            //
+            // ...
         }
         private void Awake()
         {

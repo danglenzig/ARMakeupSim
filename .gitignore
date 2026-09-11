@@ -1,0 +1,99 @@
+# =========================================================================
+# Unity General
+# =========================================================================
+[Ll]ibrary/
+[Tt]emp/
+[Oo]bj/
+[Bb]uild/
+[Bb]uilds/
+[Ll]ogs/
+[Uu]ser[Ss]ettings/
+[Mm]emoryCaptures/
+
+# =========================================================================
+# Asset Store & Package Management
+# =========================================================================
+# Asset store packages (re-downloadable)
+/[Aa]ssets/AssetStoreTools*
+
+# Ignore custom package cache
+/[Aa]ssets/Plugins/Android/repository/
+/[Aa]ssets/StreamingAssets/aa/*
+
+# =========================================================================
+# Visual Studio / VS Code / JetBrains Rider
+# =========================================================================
+.vs/
+.idea/
+*.csproj
+*.unityproj
+*.sln
+*.suo
+*.user
+*.userprefs
+*.pidb
+*.booproj
+*.svd
+*.pdb
+*.opendb
+*.VC.db
+
+# Unity Roslyn Analyzers
+/*.csproj-IntegrationTests
+
+# Code coverage reports
+*.coverage
+*.coveragexml
+
+# =========================================================================
+# Android & Native Build Artifacts
+# =========================================================================
+# Ignore exported Android Studio projects built out of Unity
+/android/
+/ExportedProject/
+
+# Gradle build cache & generated files if building locally in project root
+.gradle/
+build/
+capture/
+*.apk
+*.aab
+*.aar
+*.jar
+
+# Android Keystore files (CRITICAL: Never commit signing keys)
+*.keystore
+*.jks
+
+# Android NDK / C++ build outputs
+.cxx/
+*.so
+
+# =========================================================================
+# Unity AR Specific (AR Foundation / ARCore)
+# =========================================================================
+# Local ARCore debug logs and session recordings
+*.mp4
+*.imgdb
+ARCore/
+
+# =========================================================================
+# OS / System Specific
+# =========================================================================
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+.Trashes
+
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehdefs.db
+[Dd]esktop.ini
+$RECYCLE.BIN/
+
+# Crash dumps
+*.stackdump

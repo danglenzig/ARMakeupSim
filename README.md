@@ -70,3 +70,10 @@ FacePrefab/
 ---------------- ...
 ```
 
+### Unity AR Mobile Classes Relevant To Face Recognition & Filtering
+- `ARFaceManager`
+  - Component of `XROrigin` object
+  - Provides an `ARFace` to my runtime via the `FacePrefab` serialized field
+- `ARFace`
+  - Represents a human face detected and tracked by the device’s front-facing camera.
+  - Contains all the realtime topology data for the my prefab's facial mesh

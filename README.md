@@ -5,36 +5,36 @@
 - '**' indicates C# classes included with Unity's AR Mobile template
 
 MakeupSim(scene root)
-    XR Origin (AR Rig)/
-        Components/
-            XROrigin **
-            InputActionManager **
-            ActionAssets **
-            ARFaceManager **
-        Child Gameobjects
-            Camera Offset/
-                Components/
-                    (None, just a container of child objects)
-                Child Gameobjects/
-                    Main Camera/
-                        Components/
-                            ARCameraManager **
-                            ARCameraBackground **
-                            TrackedPoseDriver **
-                    Screen Space Ray Interactor/
-                        ...
-    AR Session/
-        Components/
-            ARSession **
-            ARInputManager **
-    EventSystem/
-        Components/
-            XR UI Input Module **
-    UI/
-        (see below...)
-    FaceConficService/
-        Components/
-            FaceConfigService *
+----XR Origin (AR Rig)/
+--------Components/
+------------XROrigin **
+------------InputActionManager **
+------------ActionAssets **
+------------ARFaceManager **
+--------Child Gameobjects
+------------Camera Offset/
+----------------Components/
+--------------------(None, just a container of child objects)
+----------------Child Gameobjects/
+--------------------Main Camera/
+------------------------Components/
+----------------------------ARCameraManager **
+----------------------------ARCameraBackground **
+----------------------------TrackedPoseDriver **
+--------------------Screen Space Ray Interactor/
+------------------------ ...
+----AR Session/
+--------Components/
+------------ARSession **
+------------ARInputManager **
+----EventSystem/
+--------Components/
+------------XR UI Input Module **
+----UI/
+--------(see below...)
+----FaceConficService/
+--------Components/
+------------FaceConfigService *
     
 
 
@@ -47,23 +47,23 @@ MakeupSim(scene root)
 - '**' indicates C# classes included with Unity's AR Mobile template
 
 FacePrefab/
-    Components/
-        ARFace **
-        MeshCollider
-        MakeupSimFaceManager *
-    Child GameObjects/
-        LipsLayer/
-            Components/
-                MakeupSimFaceLayer *
-                MeshFilter
-                MeshRenderer
-        EyeMakeupLayer/
-            Components/
-                MakeupSimFaceLayer *
-                MeshFilter
-                MeshRenderer
-        (Other layers as needed)/
-            Components/
-                ...
+----Components/
+--------ARFace **
+--------MeshCollider
+--------MakeupSimFaceManager *
+----Child GameObjects/
+--------LipsLayer/
+------------Components/
+----------------MakeupSimFaceLayer *
+----------------MeshFilter
+----------------MeshRenderer
+--------EyeMakeupLayer/
+------------Components/
+----------------MakeupSimFaceLayer *
+----------------MeshFilter
+----------------MeshRenderer
+--------(Other layers as needed)/
+------------Components/
+---------------- ...
 ```
 

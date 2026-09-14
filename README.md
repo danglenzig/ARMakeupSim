@@ -1,7 +1,7 @@
 # FacePrefab structure
 
 ```
-('*' indicates C# scripts that I authored for this assignment)
+( '*' indicates C# classes that I authored for this assignment )
 
 FacePrefab/
     Components/

@@ -5,15 +5,38 @@
 - '**' indicates C# classes included with Unity's AR Mobile template
 
 MakeupSim(scene root)
-    XROrigin/
+    XR Origin (AR Rig)/
         Components/
-            ...
+            XROrigin **
+            InputActionManager **
+            ActionAssets **
+            ARFaceManager **
         Child Gameobjects
-            Foo/
+            Camera Offset/
                 Components/
-                    ...
+                    (None, just a container of child objects)
                 Child Gameobjects/
-                    ...
+                    Main Camera/
+                        Components/
+                            ARCameraManager **
+                            ARCameraBackground **
+                            TrackedPoseDriver **
+                    Screen Space Ray Interactor/
+                        ...
+    AR Session/
+        Components/
+            ARSession **
+            ARInputManager **
+    EventSystem/
+        Components/
+            XR UI Input Module **
+    UI/
+        (see below...)
+    FaceConficService/
+        Components/
+            FaceConfigService *
+    
+
 
 ```
 
@@ -40,7 +63,7 @@ FacePrefab/
                 MeshFilter
                 MeshRenderer
         (Other layers as needed)/
-            components/
+            Components/
                 ...
 ```
 

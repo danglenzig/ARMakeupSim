@@ -1,19 +1,21 @@
 # FacePrefab structure
 
 ```
+('*' indicates C# scripts I created for this project)
+
 FacePrefab/
     Components/
         ARFace
         MeshCollider
-        MakeupSimFaceManager*
+        MakeupSimFaceManager *
     LipsLayer/
         components/
-            MakeupSimFaceLayer*
+            MakeupSimFaceLayer *
             MeshFilter
             MeshRenderer
     EyeMakeupLayer/
         components/
-            MakeupSimFaceLayer*
+            MakeupSimFaceLayer *
             MeshFilter
             MeshRenderer
     (Other layers as needed)/

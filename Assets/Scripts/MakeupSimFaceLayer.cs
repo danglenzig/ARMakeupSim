@@ -82,7 +82,7 @@ namespace MakupSim
                 return;
             }
 
-            if (_canChangeSize && eventTags[2] == "COLOR")
+            if (_canChangeColor && eventTags[2] == "COLOR")
             {
                 CycleColors();
                 return;

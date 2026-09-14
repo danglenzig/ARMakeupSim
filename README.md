@@ -31,13 +31,16 @@ MakeupSim(scene root)
 --------Components/
 ------------XR UI Input Module **
 ----UI/
---------(see below...)
+--------== SEE BELOW ==
 ----FaceConficService/
 --------Components/
 ------------FaceConfigService *
-    
+```
 
-
+### UI Structure
+```
+- '*' indicates C# classes that I authored for this assignment
+- '**' indicates C# classes included with Unity's AR Mobile template
 ```
 
 ### FacePrefab structure

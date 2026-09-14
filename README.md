@@ -66,8 +66,7 @@ FacePrefab/
 ----------------MeshFilter
 ----------------MeshRenderer
 --------(Other layers as needed)/
-------------Components/
----------------- ...
+------------ ...
 ```
 
 ### Unity AR Mobile Classes Relevant To Face Recognition & Filtering

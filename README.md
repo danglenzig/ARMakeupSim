@@ -1,6 +1,7 @@
 # FacePrefab structure
 
 ```mermaid
+%%{ init : { "themeVariables": { "primaryTextColor": "#ff0000" }}}%%
 treeView-beta
             FacePrefab/
                 Components/

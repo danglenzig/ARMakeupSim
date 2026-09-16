@@ -6,6 +6,7 @@ TagManager:
   tags:
   - LayerMenu
   - Cookie
+  - SceneManager
   layers:
   - Default
   - TransparentFX

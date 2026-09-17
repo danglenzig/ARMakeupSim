@@ -1,73 +1,16 @@
-### Main Scene Structure
+# Makeup Thing Catcher
+#### Brad Neal -- GP25
+#### Unity AR Mobile
 
-```
-- '*' indicates C# classes that I authored for this assignment
-- '**' indicates C# classes included with Unity's AR Mobile template
+![](SS1.png) ![](SS2.png)
 
-MakeupSim(scene root)
-----XR Origin (AR Rig)/
---------Components/
-------------XROrigin **
-------------InputActionManager **
-------------ActionAssets **
-------------ARFaceManager **
---------Child Gameobjects
-------------Camera Offset/
-----------------Components/
---------------------(None, just a container of child objects)
-----------------Child Gameobjects/
---------------------Main Camera/
-------------------------Components/
-----------------------------ARCameraManager **
-----------------------------ARCameraBackground **
-----------------------------TrackedPoseDriver **
---------------------Screen Space Ray Interactor/
------------------------- ...
-----AR Session/
---------Components/
-------------ARSession **
-------------ARInputManager **
-----EventSystem/
---------Components/
-------------XR UI Input Module **
-----UI/
---------== SEE BELOW ==
-----FaceConficService/
---------Components/
-------------FaceConfigService *
-```
+### Summary
 
-### UI Structure
-```
-- '*' indicates C# classes that I authored for this assignment
-- '**' indicates C# classes included with Unity's AR Mobile template
-```
+A game where you change the color of your lipstick and eyeshadow by catching things with your face.
 
-### FacePrefab structure
+### Scripts Authored For This Assignment
+- [`ShooterFaceManager`](Assets/Scripts/Shooter/ShooterFaceManager.cs)
 
-```
-- '*' indicates C# classes that I authored for this assignment
-- '**' indicates C# classes included with Unity's AR Mobile template
-
-FacePrefab/
-----Components/
---------ARFace **
---------MeshCollider
---------MakeupSimFaceManager *
-----Child GameObjects/
---------LipsLayer/
-------------Components/
-----------------MakeupSimFaceLayer *
-----------------MeshFilter
-----------------MeshRenderer
---------EyeMakeupLayer/
-------------Components/
-----------------MakeupSimFaceLayer *
-----------------MeshFilter
-----------------MeshRenderer
---------(Other layers as needed)/
------------- ...
-```
 
 ### Unity AR Mobile Classes Relevant To Face Recognition & Filtering
 - `ARFaceManager`

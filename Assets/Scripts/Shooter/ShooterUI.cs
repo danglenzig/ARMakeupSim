@@ -12,19 +12,15 @@ namespace Shooter
         //[SerializeField] private SO_EventFloatPayload _chinUpdateEvent;
         //[SerializeField] private TMP_Text _debugText;
         //[SerializeField] private RectTransform _canvasGun;
-        [SerializeField] private SO_EventFloatPayload _fuckYouEvent;
-        [SerializeField] private TMP_Text _fuckYouText;
+        //[SerializeField] private SO_EventFloatPayload _fuckYouEvent;
+        //[SerializeField] private TMP_Text _fuckYouText;
         private void OnEnable()
         {
 
-            _fuckYouEvent.OnEventTriggered += HandleFuckYouEvent;
-
-            //_chinUpdateEvent.OnEventTriggered += HandleChinUpdate;
         }
         private void OnDisable()
         {
-            _fuckYouEvent.OnEventTriggered -= HandleFuckYouEvent;
-            //_chinUpdateEvent.OnEventTriggered -= HandleChinUpdate;
+            
         }
 
         // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -33,10 +29,7 @@ namespace Shooter
 
         }
 
-        private void HandleFuckYouEvent(float val)
-        {
-            _fuckYouText.text = val.ToString();
-        }
+        
 
         /*
         private void HandleChinUpdate(float value)

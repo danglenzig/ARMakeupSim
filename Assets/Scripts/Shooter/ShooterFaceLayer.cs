@@ -9,8 +9,8 @@ namespace Shooter
     [RequireComponent(typeof(MeshRenderer))]
     public class ShooterFaceLayer : MonoBehaviour
     {
-        [SerializeField] private SO_EventColorPayload _changeColorEvent;
-        //[SerializeField] private SO_EventFloatPayload _fuckYouEvent;
+        [SerializeField] private SO_CatchEventDataPayload _catchEvent;
+        [SerializeField] private string _layerName;
 
 
         private MeshFilter _meshFilter;
@@ -26,11 +26,11 @@ namespace Shooter
 
         private void OnEnable()
         {
-            _changeColorEvent.OnEventTriggered += HandleChangeColorEvent;
+            _catchEvent.OnEventTriggered += HandleCatchEvent;
         }
         private void OnDisable()
         {
-            _changeColorEvent.OnEventTriggered -= HandleChangeColorEvent;
+            _catchEvent.OnEventTriggered -= HandleCatchEvent;
         }
 
         
@@ -43,6 +43,13 @@ namespace Shooter
         {
             Material mat = _meshRenderer.material;
             mat.SetColor("_BaseColor", newColor);
+        }
+
+        private void HandleCatchEvent(CatchEventData data)
+        {
+            if (data.EventMode != _layerName) return;
+            Material mat = _meshRenderer.material;
+            mat.SetColor("_BaseColor", data.EventColor);
         }
 
         //=====

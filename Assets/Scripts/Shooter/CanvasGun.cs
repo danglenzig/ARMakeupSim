@@ -17,7 +17,9 @@ namespace Shooter
         [SerializeField] private TMP_Text _debugText;
         [SerializeField] private bool _debugMode = false;
 
-        [SerializeField] private SO_EventColorPayload _changeColorEvent;
+        //[SerializeField] private SO_EventColorPayload _changeColorEvent;
+
+        [SerializeField] private SO_CatchEventDataPayload _catchEvent;
 
         private int _collected = 0;
 
@@ -36,12 +38,12 @@ namespace Shooter
         private void OnEnable()
         {
             _chinUpdateEvent.OnEventTriggered += HandleChinUpdate;
-            _changeColorEvent.OnEventTriggered += HandleChangeColor;
+            //_changeColorEvent.OnEventTriggered += HandleChangeColor;
         }
         private void OnDisable()
         {
             _chinUpdateEvent.OnEventTriggered -= HandleChinUpdate;
-            _changeColorEvent.OnEventTriggered -= HandleChangeColor;
+            //_changeColorEvent.OnEventTriggered -= HandleChangeColor;
         }
 
         private void OnTriggerEnter(Collider other)
@@ -75,7 +77,12 @@ namespace Shooter
 
         private void HandleChangeColor(Color c)
         {
-            GetComponent<RawImage>().color = c;
+            //GetComponent<RawImage>().color = c;
+        }
+
+        private void HandleCatchEvent(CatchEventData data)
+        {
+            //
         }
     }
 }

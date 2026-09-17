@@ -30,7 +30,7 @@ RectTransform:
   m_GameObject: {fileID: 125395525699426840}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 6, y: 6, z: 6}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
@@ -68,7 +68,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 0}
+  m_Texture: {fileID: 2800000, guid: 62d318507eca5b04ea693567c90cb5e6, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
@@ -121,8 +121,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 10, y: 10, z: 10}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 29.74376, y: 18.545782, z: 10}
+  m_Center: {x: -0.029467266, y: 1.3850124, z: 0}
 --- !u!114 &3303287779188191986
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -135,6 +135,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 399b10f0a88feea4490411d6f69af016, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Cookie
-  SPEED: 120
+  _lipsTexture: {fileID: 2800000, guid: fd8c737c080b3ab439664cd7c0703934, type: 3}
+  _eyesTexture: {fileID: 2800000, guid: 62d318507eca5b04ea693567c90cb5e6, type: 3}
+  _catchEvent: {fileID: 11400000, guid: 3063e90f6b5e1c247829de9c2b9c177e, type: 2}
+  SPEED: 160
   _changeColorEvent: {fileID: 11400000, guid: dfdb9a77c0d498d42b2337d1cfd6dfd3, type: 2}
   IsCaught: 0

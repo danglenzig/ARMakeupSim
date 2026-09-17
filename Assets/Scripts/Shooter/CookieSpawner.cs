@@ -1,4 +1,7 @@
+using Events;
+using NUnit.Framework;
 using UnityEngine;
+using System.Collections.Generic;
 using UnityRandom = UnityEngine.Random;
 
 namespace Shooter
@@ -6,7 +9,8 @@ namespace Shooter
     public class CookieSpawner : MonoBehaviour
     {
 
-        private bool _beSpawning = true;
+        [SerializeField] private SO_EventStringListPayload _interactionEvent;
+        private bool _beSpawning = false;
 
         [SerializeField] private RectTransform _maxLeft;
         [SerializeField] private RectTransform _maxRight;
@@ -23,6 +27,13 @@ namespace Shooter
             RectTransform t = GetComponent<RectTransform>();
             _spawnY = t.position.y;
             _spawnZ = t.position.z;
+
+            _interactionEvent.OnEventTriggered += HandleStartPressed;
+        }
+
+        private void OnDisable()
+        {
+            _interactionEvent.OnEventTriggered -= HandleStartPressed;
         }
 
         private void Update()
@@ -38,20 +49,19 @@ namespace Shooter
 
         private void SpawnCookie()
         {
-            
-
             float rando = Random.Range(_maxLeft.position.x, _maxRight.position.x);
 
             GameObject newCookie = Instantiate(_cookiePrefab, gameObject.GetComponent<RectTransform>(), false);
             RectTransform t = newCookie.GetComponent<RectTransform>();
-            //t.anchoredPosition = Vector2.zero;
             t.position = new Vector3(rando, _spawnY, _spawnZ);
             newCookie.SetActive(true);
-
-
-
         }
 
+        private void HandleStartPressed(List<string> tags)
+        {
+            if (tags[0] != "START_PRESSED") return;
+            _beSpawning = true;
+        }
     }
 
 
